@@ -36,3 +36,9 @@ angular.module('myApp', ['fb-api'])
 
 }])
 ```
+
+##### Available methods
+- `.getStatus`
+- `.login`
+- `.logout`
+- `.api`
