@@ -2,7 +2,7 @@
 
 	var app = ang.module('app');
 
-	app.config(function($urlRouterProvider, $stateProvider, $fbProvider) {
+	app.config(['$fbProvider', function($fbProvider) {
 		
 		$fbProvider.init({
 			appId	: '1442825702694510',
@@ -12,6 +12,6 @@
 			version	: 'v2.3'
 		});
 
-	});
+	}]);
 
 })(angular)

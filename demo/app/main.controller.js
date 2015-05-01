@@ -2,9 +2,19 @@
 
 	var app = ang.module('app');
 
-	app.controller('appContainer', ['$scope', '$fb', function($scope, $fb) {
+	app.controller('ui', ['$scope', '$timeout', '$fb', function($scope, $timeout, $fb) {
 
-		
+		$timeout(function() {
+			$fb.api({
+				path    : '/me',
+				params  : {
+					fields  : 'name'
+				}
+			}).then(function(resp) {
+				console.log(resp);
+			});			
+		}, 1000);
+
 
 	}]);
 
