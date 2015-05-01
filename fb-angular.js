@@ -39,6 +39,15 @@
 						return deferred.promise;
 					}
 
+					self.logout = function() {
+						opts = (opts || {});
+						var deferred = $q.defer();
+						FB.logout(function(resp) {
+							deferred.resolve(resp);
+						}, opts);
+						return deferred.promise;
+					}
+
 					self.api = function(params) {
 						var deferred = $q.defer();
 						params = (params || {});
